@@ -1,0 +1,1755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vistrail id="" name="" version="1.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vistrails.org/vistrail.xsd">
+  <action date="2013-01-30 09:58:42" id="1" prevId="0" session="2" user="talbertc">
+    <annotation id="0" key="__description__" value="Paste" />
+    <add id="0" objectId="0" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="0" name="FieldDataQuery" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="1" objectId="2" parentObjId="0" parentObjType="module" what="function">
+      <function id="2" name="Response_column" pos="2" />
+    </add>
+    <add id="2" objectId="2" parentObjId="2" parentObjType="function" what="parameter">
+      <parameter alias="" id="2" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="Presence" />
+    </add>
+    <add id="3" objectId="1" parentObjId="0" parentObjType="module" what="function">
+      <function id="1" name="y_column" pos="1" />
+    </add>
+    <add id="4" objectId="1" parentObjId="1" parentObjType="function" what="parameter">
+      <parameter alias="" id="1" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="North" />
+    </add>
+    <add id="5" objectId="0" parentObjId="0" parentObjType="module" what="function">
+      <function id="0" name="x_column" pos="0" />
+    </add>
+    <add id="6" objectId="0" parentObjId="0" parentObjType="function" what="parameter">
+      <parameter alias="" id="0" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="West" />
+    </add>
+    <add id="7" objectId="0" parentObjId="0" parentObjType="module" what="location">
+      <location id="0" x="74.9470114784" y="-33.864668484" />
+    </add>
+    <add id="8" objectId="1" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="1" name="TemplateLayer" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="9" objectId="3" parentObjId="1" parentObjType="module" what="function">
+      <function id="3" name="value" pos="0" />
+    </add>
+    <add id="10" objectId="3" parentObjId="3" parentObjType="function" what="parameter">
+      <parameter alias="" id="3" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="romoveg800mr" />
+    </add>
+    <add id="11" objectId="1" parentObjId="1" parentObjType="module" what="location">
+      <location id="1" x="-231.370266445" y="60.5034604697" />
+    </add>
+    <add id="12" objectId="2" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="2" name="FieldData" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="13" objectId="4" parentObjId="2" parentObjType="module" what="function">
+      <function id="4" name="value" pos="0" />
+    </add>
+    <add id="14" objectId="4" parentObjId="4" parentObjType="function" what="parameter">
+      <parameter alias="" id="4" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="RMNP_Bromus.csv" />
+    </add>
+    <add id="15" objectId="2" parentObjId="2" parentObjType="module" what="location">
+      <location id="2" x="93.3909920434" y="70.9784473637" />
+    </add>
+    <add id="16" objectId="3" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="3" name="FieldDataAggregateAndWeight" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="17" objectId="5" parentObjId="3" parentObjType="module" what="function">
+      <function id="5" name="FD_EPSG_projection" pos="0" />
+    </add>
+    <add id="18" objectId="5" parentObjId="5" parentObjType="function" what="parameter">
+      <parameter alias="" id="5" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4326" />
+    </add>
+    <add id="19" objectId="3" parentObjId="3" parentObjType="module" what="location">
+      <location id="3" x="94.4433058674" y="-125.887178" />
+    </add>
+    <add id="20" objectId="0" parentObjId="" parentObjType="" what="connection">
+      <connection id="0" />
+    </add>
+    <add id="21" objectId="1" parentObjId="0" parentObjType="connection" what="port">
+      <port id="1" moduleId="0" moduleName="FieldDataQuery" name="fieldData_file" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="22" objectId="0" parentObjId="0" parentObjType="connection" what="port">
+      <port id="0" moduleId="2" moduleName="FieldData" name="value" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="23" objectId="1" parentObjId="" parentObjType="" what="connection">
+      <connection id="1" />
+    </add>
+    <add id="24" objectId="3" parentObjId="1" parentObjType="connection" what="port">
+      <port id="3" moduleId="3" moduleName="FieldDataAggregateAndWeight" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="25" objectId="2" parentObjId="1" parentObjType="connection" what="port">
+      <port id="2" moduleId="0" moduleName="FieldDataQuery" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="26" objectId="2" parentObjId="" parentObjType="" what="connection">
+      <connection id="2" />
+    </add>
+    <add id="27" objectId="5" parentObjId="2" parentObjType="connection" what="port">
+      <port id="5" moduleId="3" moduleName="FieldDataAggregateAndWeight" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+    <add id="28" objectId="4" parentObjId="2" parentObjType="connection" what="port">
+      <port id="4" moduleId="1" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:02:22" id="2" prevId="1" session="2" user="talbertc">
+    <annotation id="3" key="__description__" value="Paste" />
+    <add id="29" objectId="4" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="4" name="Predictor" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="30" objectId="9" parentObjId="4" parentObjType="module" what="function">
+      <function id="9" name="AggregationMethod" pos="3" />
+    </add>
+    <add id="31" objectId="9" parentObjId="9" parentObjType="function" what="parameter">
+      <parameter alias="" id="9" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:AggregationMethod:Other" val="Majority" />
+    </add>
+    <add id="32" objectId="8" parentObjId="4" parentObjType="module" what="function">
+      <function id="8" name="ResampleMethod" pos="2" />
+    </add>
+    <add id="33" objectId="8" parentObjId="8" parentObjType="function" what="parameter">
+      <parameter alias="" id="8" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:ResampleMethod:Other" val="NearestNeighbor" />
+    </add>
+    <add id="34" objectId="7" parentObjId="4" parentObjType="module" what="function">
+      <function id="7" name="categorical" pos="1" />
+    </add>
+    <add id="35" objectId="7" parentObjId="7" parentObjType="function" what="parameter">
+      <parameter alias="" id="7" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Boolean" val="True" />
+    </add>
+    <add id="36" objectId="6" parentObjId="4" parentObjType="module" what="function">
+      <function id="6" name="file" pos="0" />
+    </add>
+    <add id="37" objectId="6" parentObjId="6" parentObjType="function" what="parameter">
+      <parameter alias="" id="6" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="AdditionalLayers\romoveg\hdr.adf" />
+    </add>
+    <add id="38" objectId="4" parentObjId="4" parentObjType="module" what="location">
+      <location id="4" x="-67.8184723791" y="-109.393821153" />
+    </add>
+    <add id="39" objectId="5" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="5" name="PrismPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="40" objectId="10" parentObjId="5" parentObjType="module" what="function">
+      <function id="10" name="value" pos="0" />
+    </add>
+    <add id="41" objectId="10" parentObjId="10" parentObjType="function" what="parameter">
+      <parameter alias="" id="10" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:PrismPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_18_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_06_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_05_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_03_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_17_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_07_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_15_1971_2000_800m.img', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="42" objectId="5" parentObjId="5" parentObjType="module" what="location">
+      <location id="5" x="-80.5744386561" y="-27.3911808031" />
+    </add>
+    <add id="43" objectId="6" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="6" name="ModisPhenologyPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="44" objectId="11" parentObjId="6" parentObjType="module" what="function">
+      <function id="11" name="value" pos="0" />
+    </add>
+    <add id="45" objectId="11" parentObjId="11" parentObjType="function" what="parameter">
+      <parameter alias="" id="11" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:ModisPhenologyPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_amplitudes1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_seasonlengths1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_annualMeanValue_Average.tif', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="46" objectId="6" parentObjId="6" parentObjType="module" what="location">
+      <location id="6" x="-87.8635622431" y="61.9005831329" />
+    </add>
+    <add id="47" objectId="7" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="7" name="PARC" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="48" objectId="7" parentObjId="7" parentObjType="module" what="location">
+      <location id="7" x="150.855235219" y="-89.3487312897" />
+    </add>
+    <add id="49" objectId="3" parentObjId="" parentObjType="" what="connection">
+      <connection id="3" />
+    </add>
+    <add id="50" objectId="7" parentObjId="3" parentObjType="connection" what="port">
+      <port id="7" moduleId="7" moduleName="PARC" name="predictor" signature="(gov.usgs.sahm:Predictor:DataInput)" type="destination" />
+    </add>
+    <add id="51" objectId="6" parentObjId="3" parentObjType="connection" what="port">
+      <port id="6" moduleId="4" moduleName="Predictor" name="value" signature="(gov.usgs.sahm:Predictor:DataInput)" type="source" />
+    </add>
+    <add id="52" objectId="4" parentObjId="" parentObjType="" what="connection">
+      <connection id="4" />
+    </add>
+    <add id="53" objectId="9" parentObjId="4" parentObjType="connection" what="port">
+      <port id="9" moduleId="7" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+    <add id="54" objectId="8" parentObjId="4" parentObjType="connection" what="port">
+      <port id="8" moduleId="5" moduleName="PrismPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+    <add id="55" objectId="5" parentObjId="" parentObjType="" what="connection">
+      <connection id="5" />
+    </add>
+    <add id="56" objectId="11" parentObjId="5" parentObjType="connection" what="port">
+      <port id="11" moduleId="7" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+    <add id="57" objectId="10" parentObjId="5" parentObjType="connection" what="port">
+      <port id="10" moduleId="6" moduleName="ModisPhenologyPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:02:46" id="3" prevId="2" session="2" user="talbertc">
+    <change id="58" newObjId="8" oldObjId="4" parentObjId="4" parentObjType="module" what="location">
+      <location id="8" x="-327.306849557" y="-303.188938286" />
+    </change>
+    <change id="59" newObjId="9" oldObjId="5" parentObjId="5" parentObjType="module" what="location">
+      <location id="9" x="-340.062815834" y="-221.186297936" />
+    </change>
+    <change id="60" newObjId="10" oldObjId="6" parentObjId="6" parentObjType="module" what="location">
+      <location id="10" x="-347.351939421" y="-131.894534" />
+    </change>
+    <change id="61" newObjId="11" oldObjId="7" parentObjId="7" parentObjType="module" what="location">
+      <location id="11" x="-108.633141958" y="-283.143848422" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:02:46" id="4" prevId="3" session="2" user="talbertc">
+    <add id="62" objectId="6" parentObjId="" parentObjType="" what="connection">
+      <connection id="6" />
+    </add>
+    <add id="63" objectId="12" parentObjId="6" parentObjType="connection" what="port">
+      <port id="12" moduleId="1" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+    <add id="64" objectId="13" parentObjId="6" parentObjType="connection" what="port">
+      <port id="13" moduleId="7" moduleName="PARC" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:02:58" id="5" prevId="4" session="2" user="talbertc">
+    <change id="65" newObjId="12" oldObjId="8" parentObjId="4" parentObjType="module" what="location">
+      <location id="12" x="-484.970673665" y="-207.93371122" />
+    </change>
+    <change id="66" newObjId="13" oldObjId="9" parentObjId="5" parentObjType="module" what="location">
+      <location id="13" x="-497.726639942" y="-125.931070871" />
+    </change>
+    <change id="67" newObjId="14" oldObjId="10" parentObjId="6" parentObjType="module" what="location">
+      <location id="14" x="-505.015763529" y="-36.6393069346" />
+    </change>
+    <change id="68" newObjId="15" oldObjId="11" parentObjId="7" parentObjType="module" what="location">
+      <location id="15" x="-266.296966066" y="-187.888621357" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:03:07" id="6" prevId="5" session="2" user="talbertc">
+    <add id="69" objectId="12" parentObjId="7" parentObjType="module" what="function">
+      <function id="12" name="ignoreNonOverlap" pos="0" />
+    </add>
+    <add id="70" objectId="12" parentObjId="12" parentObjType="function" what="parameter">
+      <parameter alias="" id="12" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Boolean" val="False" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:03:08" id="7" prevId="6" session="2" user="talbertc">
+    <change id="71" newObjId="13" oldObjId="12" parentObjId="12" parentObjType="function" what="parameter">
+      <parameter alias="" id="13" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Boolean" val="True" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:04:06" id="8" prevId="7" session="2" user="talbertc">
+    <delete id="72" objectId="7" parentObjId="3" parentObjType="connection" what="port" />
+    <delete id="73" objectId="6" parentObjId="3" parentObjType="connection" what="port" />
+    <delete id="74" objectId="3" parentObjId="" parentObjType="" what="connection" />
+    <delete id="75" objectId="12" parentObjId="4" parentObjType="module" what="location" />
+    <delete id="76" objectId="6" parentObjId="6" parentObjType="function" what="parameter" />
+    <delete id="77" objectId="6" parentObjId="4" parentObjType="module" what="function" />
+    <delete id="78" objectId="7" parentObjId="7" parentObjType="function" what="parameter" />
+    <delete id="79" objectId="7" parentObjId="4" parentObjType="module" what="function" />
+    <delete id="80" objectId="8" parentObjId="8" parentObjType="function" what="parameter" />
+    <delete id="81" objectId="8" parentObjId="4" parentObjType="module" what="function" />
+    <delete id="82" objectId="9" parentObjId="9" parentObjType="function" what="parameter" />
+    <delete id="83" objectId="9" parentObjId="4" parentObjType="module" what="function" />
+    <delete id="84" objectId="4" parentObjId="" parentObjType="" what="module" />
+  </action>
+  <action date="2013-01-30 10:06:24" id="9" prevId="8" session="2" user="talbertc">
+    <annotation id="6" key="__description__" value="Paste" />
+    <add id="85" objectId="8" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="8" name="MDSBuilder" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="86" objectId="16" parentObjId="8" parentObjType="module" what="location">
+      <location id="16" x="-110.90526412" y="119.849395136" />
+    </add>
+    <add id="87" objectId="9" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="9" name="ModelEvaluationSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="88" objectId="17" parentObjId="9" parentObjType="module" what="location">
+      <location id="17" x="-35.1840016896" y="23.7416389749" />
+    </add>
+    <add id="89" objectId="10" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="10" name="ModelSelectionSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="90" objectId="18" parentObjId="10" parentObjType="module" what="location">
+      <location id="18" x="5.58898577338" y="-92.7526109181" />
+    </add>
+    <add id="91" objectId="11" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="11" name="CovariateCorrelationAndSelection" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="92" objectId="19" parentObjId="11" parentObjType="module" what="location">
+      <location id="19" x="55.0990419774" y="-215.071573305" />
+    </add>
+    <add id="93" objectId="7" parentObjId="" parentObjType="" what="connection">
+      <connection id="7" />
+    </add>
+    <add id="94" objectId="15" parentObjId="7" parentObjType="connection" what="port">
+      <port id="15" moduleId="9" moduleName="ModelEvaluationSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="95" objectId="14" parentObjId="7" parentObjType="connection" what="port">
+      <port id="14" moduleId="8" moduleName="MDSBuilder" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="96" objectId="8" parentObjId="" parentObjType="" what="connection">
+      <connection id="8" />
+    </add>
+    <add id="97" objectId="17" parentObjId="8" parentObjType="connection" what="port">
+      <port id="17" moduleId="11" moduleName="CovariateCorrelationAndSelection" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="98" objectId="16" parentObjId="8" parentObjType="connection" what="port">
+      <port id="16" moduleId="10" moduleName="ModelSelectionSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="99" objectId="9" parentObjId="" parentObjType="" what="connection">
+      <connection id="9" />
+    </add>
+    <add id="100" objectId="19" parentObjId="9" parentObjType="connection" what="port">
+      <port id="19" moduleId="10" moduleName="ModelSelectionSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="101" objectId="18" parentObjId="9" parentObjType="connection" what="port">
+      <port id="18" moduleId="9" moduleName="ModelEvaluationSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:06:31" id="10" prevId="9" session="2" user="talbertc">
+    <change id="102" newObjId="20" oldObjId="16" parentObjId="8" parentObjType="module" what="location">
+      <location id="20" x="-179.883187167" y="-310.441458159" />
+    </change>
+    <change id="103" newObjId="21" oldObjId="17" parentObjId="9" parentObjType="module" what="location">
+      <location id="21" x="-104.161924737" y="-406.54921432" />
+    </change>
+    <change id="104" newObjId="22" oldObjId="18" parentObjId="10" parentObjType="module" what="location">
+      <location id="22" x="-63.3889372739" y="-523.043464213" />
+    </change>
+    <change id="105" newObjId="23" oldObjId="19" parentObjId="11" parentObjType="module" what="location">
+      <location id="23" x="-13.8788810699" y="-645.3624266" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:06:31" id="11" prevId="10" session="2" user="talbertc">
+    <add id="106" objectId="10" parentObjId="" parentObjType="" what="connection">
+      <connection id="10" />
+    </add>
+    <add id="107" objectId="20" parentObjId="10" parentObjType="connection" what="port">
+      <port id="20" moduleId="7" moduleName="PARC" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="source" />
+    </add>
+    <add id="108" objectId="21" parentObjId="10" parentObjType="connection" what="port">
+      <port id="21" moduleId="8" moduleName="MDSBuilder" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:22:15" id="12" prevId="11" session="5" user="talbertc">
+    <annotation id="7" key="__description__" value="Upgrade" />
+    <delete id="109" objectId="1" parentObjId="0" parentObjType="connection" what="port" />
+    <delete id="110" objectId="0" parentObjId="0" parentObjType="connection" what="port" />
+    <delete id="111" objectId="0" parentObjId="" parentObjType="" what="connection" />
+    <delete id="112" objectId="3" parentObjId="1" parentObjType="connection" what="port" />
+    <delete id="113" objectId="2" parentObjId="1" parentObjType="connection" what="port" />
+    <delete id="114" objectId="1" parentObjId="" parentObjType="" what="connection" />
+    <delete id="115" objectId="0" parentObjId="0" parentObjType="module" what="location" />
+    <delete id="116" objectId="0" parentObjId="0" parentObjType="function" what="parameter" />
+    <delete id="117" objectId="0" parentObjId="0" parentObjType="module" what="function" />
+    <delete id="118" objectId="1" parentObjId="1" parentObjType="function" what="parameter" />
+    <delete id="119" objectId="1" parentObjId="0" parentObjType="module" what="function" />
+    <delete id="120" objectId="2" parentObjId="2" parentObjType="function" what="parameter" />
+    <delete id="121" objectId="2" parentObjId="0" parentObjType="module" what="function" />
+    <delete id="122" objectId="0" parentObjId="" parentObjType="" what="module" />
+    <delete id="123" objectId="5" parentObjId="2" parentObjType="connection" what="port" />
+    <delete id="124" objectId="4" parentObjId="2" parentObjType="connection" what="port" />
+    <delete id="125" objectId="2" parentObjId="" parentObjType="" what="connection" />
+    <delete id="126" objectId="12" parentObjId="6" parentObjType="connection" what="port" />
+    <delete id="127" objectId="13" parentObjId="6" parentObjType="connection" what="port" />
+    <delete id="128" objectId="6" parentObjId="" parentObjType="" what="connection" />
+    <delete id="129" objectId="1" parentObjId="1" parentObjType="module" what="location" />
+    <delete id="130" objectId="3" parentObjId="3" parentObjType="function" what="parameter" />
+    <delete id="131" objectId="3" parentObjId="1" parentObjType="module" what="function" />
+    <delete id="132" objectId="1" parentObjId="" parentObjType="" what="module" />
+    <delete id="133" objectId="2" parentObjId="2" parentObjType="module" what="location" />
+    <delete id="134" objectId="4" parentObjId="4" parentObjType="function" what="parameter" />
+    <delete id="135" objectId="4" parentObjId="2" parentObjType="module" what="function" />
+    <delete id="136" objectId="2" parentObjId="" parentObjType="" what="module" />
+    <delete id="137" objectId="20" parentObjId="10" parentObjType="connection" what="port" />
+    <delete id="138" objectId="21" parentObjId="10" parentObjType="connection" what="port" />
+    <delete id="139" objectId="10" parentObjId="" parentObjType="" what="connection" />
+    <delete id="140" objectId="15" parentObjId="7" parentObjType="connection" what="port" />
+    <delete id="141" objectId="14" parentObjId="7" parentObjType="connection" what="port" />
+    <delete id="142" objectId="7" parentObjId="" parentObjType="" what="connection" />
+    <delete id="143" objectId="20" parentObjId="8" parentObjType="module" what="location" />
+    <delete id="144" objectId="8" parentObjId="" parentObjType="" what="module" />
+    <delete id="145" objectId="3" parentObjId="3" parentObjType="module" what="location" />
+    <delete id="146" objectId="5" parentObjId="5" parentObjType="function" what="parameter" />
+    <delete id="147" objectId="5" parentObjId="3" parentObjType="module" what="function" />
+    <delete id="148" objectId="3" parentObjId="" parentObjType="" what="module" />
+    <delete id="149" objectId="19" parentObjId="9" parentObjType="connection" what="port" />
+    <delete id="150" objectId="18" parentObjId="9" parentObjType="connection" what="port" />
+    <delete id="151" objectId="9" parentObjId="" parentObjType="" what="connection" />
+    <delete id="152" objectId="21" parentObjId="9" parentObjType="module" what="location" />
+    <delete id="153" objectId="9" parentObjId="" parentObjType="" what="module" />
+    <delete id="154" objectId="17" parentObjId="8" parentObjType="connection" what="port" />
+    <delete id="155" objectId="16" parentObjId="8" parentObjType="connection" what="port" />
+    <delete id="156" objectId="8" parentObjId="" parentObjType="" what="connection" />
+    <delete id="157" objectId="22" parentObjId="10" parentObjType="module" what="location" />
+    <delete id="158" objectId="10" parentObjId="" parentObjType="" what="module" />
+    <delete id="159" objectId="9" parentObjId="4" parentObjType="connection" what="port" />
+    <delete id="160" objectId="8" parentObjId="4" parentObjType="connection" what="port" />
+    <delete id="161" objectId="4" parentObjId="" parentObjType="" what="connection" />
+    <delete id="162" objectId="13" parentObjId="5" parentObjType="module" what="location" />
+    <delete id="163" objectId="10" parentObjId="10" parentObjType="function" what="parameter" />
+    <delete id="164" objectId="10" parentObjId="5" parentObjType="module" what="function" />
+    <delete id="165" objectId="5" parentObjId="" parentObjType="" what="module" />
+    <delete id="166" objectId="23" parentObjId="11" parentObjType="module" what="location" />
+    <delete id="167" objectId="11" parentObjId="" parentObjType="" what="module" />
+    <delete id="168" objectId="11" parentObjId="5" parentObjType="connection" what="port" />
+    <delete id="169" objectId="10" parentObjId="5" parentObjType="connection" what="port" />
+    <delete id="170" objectId="5" parentObjId="" parentObjType="" what="connection" />
+    <delete id="171" objectId="14" parentObjId="6" parentObjType="module" what="location" />
+    <delete id="172" objectId="11" parentObjId="11" parentObjType="function" what="parameter" />
+    <delete id="173" objectId="11" parentObjId="6" parentObjType="module" what="function" />
+    <delete id="174" objectId="6" parentObjId="" parentObjType="" what="module" />
+    <delete id="175" objectId="15" parentObjId="7" parentObjType="module" what="location" />
+    <delete id="176" objectId="13" parentObjId="12" parentObjType="function" what="parameter" />
+    <delete id="177" objectId="12" parentObjId="7" parentObjType="module" what="function" />
+    <delete id="178" objectId="7" parentObjId="" parentObjType="" what="module" />
+    <add id="179" objectId="12" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="12" name="FieldDataQuery" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="180" objectId="15" parentObjId="12" parentObjType="module" what="function">
+      <function id="15" name="Response_column" pos="2" />
+    </add>
+    <add id="181" objectId="16" parentObjId="15" parentObjType="function" what="parameter">
+      <parameter alias="" id="16" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="Presence" />
+    </add>
+    <add id="182" objectId="14" parentObjId="12" parentObjType="module" what="function">
+      <function id="14" name="y_column" pos="1" />
+    </add>
+    <add id="183" objectId="15" parentObjId="14" parentObjType="function" what="parameter">
+      <parameter alias="" id="15" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="North" />
+    </add>
+    <add id="184" objectId="13" parentObjId="12" parentObjType="module" what="function">
+      <function id="13" name="x_column" pos="0" />
+    </add>
+    <add id="185" objectId="14" parentObjId="13" parentObjType="function" what="parameter">
+      <parameter alias="" id="14" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="West" />
+    </add>
+    <add id="186" objectId="24" parentObjId="12" parentObjType="module" what="location">
+      <location id="24" x="74.9470114784" y="-33.864668484" />
+    </add>
+    <add id="187" objectId="13" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="13" name="TemplateLayer" namespace="DataInput" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="188" objectId="16" parentObjId="13" parentObjType="module" what="function">
+      <function id="16" name="value" pos="0" />
+    </add>
+    <add id="189" objectId="17" parentObjId="16" parentObjType="function" what="parameter">
+      <parameter alias="" id="17" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="romoveg800mr" />
+    </add>
+    <add id="190" objectId="25" parentObjId="13" parentObjType="module" what="location">
+      <location id="25" x="-231.370266445" y="60.5034604697" />
+    </add>
+    <add id="191" objectId="14" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="14" name="FieldData" namespace="DataInput" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="192" objectId="17" parentObjId="14" parentObjType="module" what="function">
+      <function id="17" name="value" pos="0" />
+    </add>
+    <add id="193" objectId="18" parentObjId="17" parentObjType="function" what="parameter">
+      <parameter alias="" id="18" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="RMNP_Bromus.csv" />
+    </add>
+    <add id="194" objectId="26" parentObjId="14" parentObjType="module" what="location">
+      <location id="26" x="93.3909920434" y="70.9784473637" />
+    </add>
+    <add id="195" objectId="15" parentObjId="" parentObjType="" what="connection">
+      <connection id="15" />
+    </add>
+    <add id="196" objectId="30" parentObjId="15" parentObjType="connection" what="port">
+      <port id="30" moduleId="14" moduleName="FieldData" name="value" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="197" objectId="31" parentObjId="15" parentObjType="connection" what="port">
+      <port id="31" moduleId="12" moduleName="FieldDataQuery" name="fieldData_file" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="198" objectId="15" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="15" name="MDSBuilder" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="199" objectId="27" parentObjId="15" parentObjType="module" what="location">
+      <location id="27" x="-179.883187167" y="-310.441458159" />
+    </add>
+    <add id="200" objectId="16" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="16" name="FieldDataAggregateAndWeight" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="201" objectId="18" parentObjId="16" parentObjType="module" what="function">
+      <function id="18" name="FD_EPSG_projection" pos="0" />
+    </add>
+    <add id="202" objectId="19" parentObjId="18" parentObjType="function" what="parameter">
+      <parameter alias="" id="19" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4326" />
+    </add>
+    <add id="203" objectId="28" parentObjId="16" parentObjType="module" what="location">
+      <location id="28" x="94.4433058674" y="-125.887178" />
+    </add>
+    <add id="204" objectId="18" parentObjId="" parentObjType="" what="connection">
+      <connection id="18" />
+    </add>
+    <add id="205" objectId="36" parentObjId="18" parentObjType="connection" what="port">
+      <port id="36" moduleId="12" moduleName="FieldDataQuery" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="206" objectId="37" parentObjId="18" parentObjType="connection" what="port">
+      <port id="37" moduleId="16" moduleName="FieldDataAggregateAndWeight" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="207" objectId="19" parentObjId="" parentObjType="" what="connection">
+      <connection id="19" />
+    </add>
+    <add id="208" objectId="38" parentObjId="19" parentObjType="connection" what="port">
+      <port id="38" moduleId="13" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+    <add id="209" objectId="39" parentObjId="19" parentObjType="connection" what="port">
+      <port id="39" moduleId="16" moduleName="FieldDataAggregateAndWeight" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+    <add id="210" objectId="17" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="17" name="ModelEvaluationSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="211" objectId="29" parentObjId="17" parentObjType="module" what="location">
+      <location id="29" x="-104.161924737" y="-406.54921432" />
+    </add>
+    <add id="212" objectId="21" parentObjId="" parentObjType="" what="connection">
+      <connection id="21" />
+    </add>
+    <add id="213" objectId="42" parentObjId="21" parentObjType="connection" what="port">
+      <port id="42" moduleId="15" moduleName="MDSBuilder" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="214" objectId="43" parentObjId="21" parentObjType="connection" what="port">
+      <port id="43" moduleId="17" moduleName="ModelEvaluationSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="215" objectId="18" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="18" name="ModelSelectionSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="216" objectId="30" parentObjId="18" parentObjType="module" what="location">
+      <location id="30" x="-63.3889372739" y="-523.043464213" />
+    </add>
+    <add id="217" objectId="23" parentObjId="" parentObjType="" what="connection">
+      <connection id="23" />
+    </add>
+    <add id="218" objectId="46" parentObjId="23" parentObjType="connection" what="port">
+      <port id="46" moduleId="17" moduleName="ModelEvaluationSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="219" objectId="47" parentObjId="23" parentObjType="connection" what="port">
+      <port id="47" moduleId="18" moduleName="ModelSelectionSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="220" objectId="19" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="19" name="PrismPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="221" objectId="19" parentObjId="19" parentObjType="module" what="function">
+      <function id="19" name="value" pos="0" />
+    </add>
+    <add id="222" objectId="20" parentObjId="19" parentObjType="function" what="parameter">
+      <parameter alias="" id="20" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:PrismPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_18_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_06_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_05_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_03_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_17_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_07_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_15_1971_2000_800m.img', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="223" objectId="31" parentObjId="19" parentObjType="module" what="location">
+      <location id="31" x="-497.726639942" y="-125.931070871" />
+    </add>
+    <add id="224" objectId="20" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="20" name="CovariateCorrelationAndSelection" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="225" objectId="32" parentObjId="20" parentObjType="module" what="location">
+      <location id="32" x="-13.8788810699" y="-645.3624266" />
+    </add>
+    <add id="226" objectId="25" parentObjId="" parentObjType="" what="connection">
+      <connection id="25" />
+    </add>
+    <add id="227" objectId="50" parentObjId="25" parentObjType="connection" what="port">
+      <port id="50" moduleId="18" moduleName="ModelSelectionSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="228" objectId="51" parentObjId="25" parentObjType="connection" what="port">
+      <port id="51" moduleId="20" moduleName="CovariateCorrelationAndSelection" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="229" objectId="21" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="21" name="ModisPhenologyPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="230" objectId="20" parentObjId="21" parentObjType="module" what="function">
+      <function id="20" name="value" pos="0" />
+    </add>
+    <add id="231" objectId="21" parentObjId="20" parentObjType="function" what="parameter">
+      <parameter alias="" id="21" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:ModisPhenologyPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_amplitudes1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_seasonlengths1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_annualMeanValue_Average.tif', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="232" objectId="33" parentObjId="21" parentObjType="module" what="location">
+      <location id="33" x="-505.015763529" y="-36.6393069346" />
+    </add>
+    <add id="233" objectId="22" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="22" name="PARC" namespace="Tools" package="gov.usgs.sahm" version="1.0.2" />
+    </add>
+    <add id="234" objectId="21" parentObjId="22" parentObjType="module" what="function">
+      <function id="21" name="ignoreNonOverlap" pos="0" />
+    </add>
+    <add id="235" objectId="22" parentObjId="21" parentObjType="function" what="parameter">
+      <parameter alias="" id="22" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Boolean" val="True" />
+    </add>
+    <add id="236" objectId="34" parentObjId="22" parentObjType="module" what="location">
+      <location id="34" x="-266.296966066" y="-187.888621357" />
+    </add>
+    <add id="237" objectId="27" parentObjId="" parentObjType="" what="connection">
+      <connection id="27" />
+    </add>
+    <add id="238" objectId="54" parentObjId="27" parentObjType="connection" what="port">
+      <port id="54" moduleId="22" moduleName="PARC" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="source" />
+    </add>
+    <add id="239" objectId="55" parentObjId="27" parentObjType="connection" what="port">
+      <port id="55" moduleId="15" moduleName="MDSBuilder" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="destination" />
+    </add>
+    <add id="240" objectId="28" parentObjId="" parentObjType="" what="connection">
+      <connection id="28" />
+    </add>
+    <add id="241" objectId="56" parentObjId="28" parentObjType="connection" what="port">
+      <port id="56" moduleId="13" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+    <add id="242" objectId="57" parentObjId="28" parentObjType="connection" what="port">
+      <port id="57" moduleId="22" moduleName="PARC" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+    <add id="243" objectId="29" parentObjId="" parentObjType="" what="connection">
+      <connection id="29" />
+    </add>
+    <add id="244" objectId="58" parentObjId="29" parentObjType="connection" what="port">
+      <port id="58" moduleId="19" moduleName="PrismPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+    <add id="245" objectId="59" parentObjId="29" parentObjType="connection" what="port">
+      <port id="59" moduleId="22" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+    <add id="246" objectId="30" parentObjId="" parentObjType="" what="connection">
+      <connection id="30" />
+    </add>
+    <add id="247" objectId="60" parentObjId="30" parentObjType="connection" what="port">
+      <port id="60" moduleId="21" moduleName="ModisPhenologyPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+    <add id="248" objectId="61" parentObjId="30" parentObjType="connection" what="port">
+      <port id="61" moduleId="22" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:22:39" id="13" prevId="12" session="5" user="talbertc">
+    <add id="249" objectId="51" parentObjId="" parentObjType="" what="connection">
+      <connection id="51" />
+    </add>
+    <add id="250" objectId="102" parentObjId="51" parentObjType="connection" what="port">
+      <port id="102" moduleId="16" moduleName="FieldDataAggregateAndWeight" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="251" objectId="103" parentObjId="51" parentObjType="connection" what="port">
+      <port id="103" moduleId="15" moduleName="MDSBuilder" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:38:04" id="14" prevId="13" session="8" user="talbertc">
+    <annotation id="10" key="__description__" value="Upgrade" />
+    <delete id="252" objectId="38" parentObjId="19" parentObjType="connection" what="port" />
+    <delete id="253" objectId="39" parentObjId="19" parentObjType="connection" what="port" />
+    <delete id="254" objectId="19" parentObjId="" parentObjType="" what="connection" />
+    <delete id="255" objectId="36" parentObjId="18" parentObjType="connection" what="port" />
+    <delete id="256" objectId="37" parentObjId="18" parentObjType="connection" what="port" />
+    <delete id="257" objectId="18" parentObjId="" parentObjType="" what="connection" />
+    <delete id="258" objectId="102" parentObjId="51" parentObjType="connection" what="port" />
+    <delete id="259" objectId="103" parentObjId="51" parentObjType="connection" what="port" />
+    <delete id="260" objectId="51" parentObjId="" parentObjType="" what="connection" />
+    <delete id="261" objectId="28" parentObjId="16" parentObjType="module" what="location" />
+    <delete id="262" objectId="19" parentObjId="18" parentObjType="function" what="parameter" />
+    <delete id="263" objectId="18" parentObjId="16" parentObjType="module" what="function" />
+    <delete id="264" objectId="16" parentObjId="" parentObjType="" what="module" />
+    <delete id="265" objectId="42" parentObjId="21" parentObjType="connection" what="port" />
+    <delete id="266" objectId="43" parentObjId="21" parentObjType="connection" what="port" />
+    <delete id="267" objectId="21" parentObjId="" parentObjType="" what="connection" />
+    <delete id="268" objectId="46" parentObjId="23" parentObjType="connection" what="port" />
+    <delete id="269" objectId="47" parentObjId="23" parentObjType="connection" what="port" />
+    <delete id="270" objectId="23" parentObjId="" parentObjType="" what="connection" />
+    <delete id="271" objectId="29" parentObjId="17" parentObjType="module" what="location" />
+    <delete id="272" objectId="17" parentObjId="" parentObjType="" what="module" />
+    <delete id="273" objectId="54" parentObjId="27" parentObjType="connection" what="port" />
+    <delete id="274" objectId="55" parentObjId="27" parentObjType="connection" what="port" />
+    <delete id="275" objectId="27" parentObjId="" parentObjType="" what="connection" />
+    <delete id="276" objectId="56" parentObjId="28" parentObjType="connection" what="port" />
+    <delete id="277" objectId="57" parentObjId="28" parentObjType="connection" what="port" />
+    <delete id="278" objectId="28" parentObjId="" parentObjType="" what="connection" />
+    <delete id="279" objectId="58" parentObjId="29" parentObjType="connection" what="port" />
+    <delete id="280" objectId="59" parentObjId="29" parentObjType="connection" what="port" />
+    <delete id="281" objectId="29" parentObjId="" parentObjType="" what="connection" />
+    <delete id="282" objectId="60" parentObjId="30" parentObjType="connection" what="port" />
+    <delete id="283" objectId="61" parentObjId="30" parentObjType="connection" what="port" />
+    <delete id="284" objectId="30" parentObjId="" parentObjType="" what="connection" />
+    <delete id="285" objectId="34" parentObjId="22" parentObjType="module" what="location" />
+    <delete id="286" objectId="22" parentObjId="21" parentObjType="function" what="parameter" />
+    <delete id="287" objectId="21" parentObjId="22" parentObjType="module" what="function" />
+    <delete id="288" objectId="22" parentObjId="" parentObjType="" what="module" />
+    <delete id="289" objectId="50" parentObjId="25" parentObjType="connection" what="port" />
+    <delete id="290" objectId="51" parentObjId="25" parentObjType="connection" what="port" />
+    <delete id="291" objectId="25" parentObjId="" parentObjType="" what="connection" />
+    <delete id="292" objectId="32" parentObjId="20" parentObjType="module" what="location" />
+    <delete id="293" objectId="20" parentObjId="" parentObjType="" what="module" />
+    <delete id="294" objectId="30" parentObjId="15" parentObjType="connection" what="port" />
+    <delete id="295" objectId="31" parentObjId="15" parentObjType="connection" what="port" />
+    <delete id="296" objectId="15" parentObjId="" parentObjType="" what="connection" />
+    <delete id="297" objectId="26" parentObjId="14" parentObjType="module" what="location" />
+    <delete id="298" objectId="18" parentObjId="17" parentObjType="function" what="parameter" />
+    <delete id="299" objectId="17" parentObjId="14" parentObjType="module" what="function" />
+    <delete id="300" objectId="14" parentObjId="" parentObjType="" what="module" />
+    <delete id="301" objectId="33" parentObjId="21" parentObjType="module" what="location" />
+    <delete id="302" objectId="21" parentObjId="20" parentObjType="function" what="parameter" />
+    <delete id="303" objectId="20" parentObjId="21" parentObjType="module" what="function" />
+    <delete id="304" objectId="21" parentObjId="" parentObjType="" what="module" />
+    <delete id="305" objectId="27" parentObjId="15" parentObjType="module" what="location" />
+    <delete id="306" objectId="15" parentObjId="" parentObjType="" what="module" />
+    <delete id="307" objectId="30" parentObjId="18" parentObjType="module" what="location" />
+    <delete id="308" objectId="18" parentObjId="" parentObjType="" what="module" />
+    <delete id="309" objectId="24" parentObjId="12" parentObjType="module" what="location" />
+    <delete id="310" objectId="14" parentObjId="13" parentObjType="function" what="parameter" />
+    <delete id="311" objectId="13" parentObjId="12" parentObjType="module" what="function" />
+    <delete id="312" objectId="15" parentObjId="14" parentObjType="function" what="parameter" />
+    <delete id="313" objectId="14" parentObjId="12" parentObjType="module" what="function" />
+    <delete id="314" objectId="16" parentObjId="15" parentObjType="function" what="parameter" />
+    <delete id="315" objectId="15" parentObjId="12" parentObjType="module" what="function" />
+    <delete id="316" objectId="12" parentObjId="" parentObjType="" what="module" />
+    <delete id="317" objectId="31" parentObjId="19" parentObjType="module" what="location" />
+    <delete id="318" objectId="20" parentObjId="19" parentObjType="function" what="parameter" />
+    <delete id="319" objectId="19" parentObjId="19" parentObjType="module" what="function" />
+    <delete id="320" objectId="19" parentObjId="" parentObjType="" what="module" />
+    <delete id="321" objectId="25" parentObjId="13" parentObjType="module" what="location" />
+    <delete id="322" objectId="17" parentObjId="16" parentObjType="function" what="parameter" />
+    <delete id="323" objectId="16" parentObjId="13" parentObjType="module" what="function" />
+    <delete id="324" objectId="13" parentObjId="" parentObjType="" what="module" />
+    <add id="325" objectId="23" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="23" name="FieldDataAggregateAndWeight" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="326" objectId="22" parentObjId="23" parentObjType="module" what="function">
+      <function id="22" name="FD_EPSG_projection" pos="0" />
+    </add>
+    <add id="327" objectId="23" parentObjId="22" parentObjType="function" what="parameter">
+      <parameter alias="" id="23" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4326" />
+    </add>
+    <add id="328" objectId="35" parentObjId="23" parentObjType="module" what="location">
+      <location id="35" x="94.4433058674" y="-125.887178" />
+    </add>
+    <add id="329" objectId="24" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="24" name="ModelEvaluationSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="330" objectId="36" parentObjId="24" parentObjType="module" what="location">
+      <location id="36" x="-104.161924737" y="-406.54921432" />
+    </add>
+    <add id="331" objectId="25" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="25" name="PARC" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="332" objectId="23" parentObjId="25" parentObjType="module" what="function">
+      <function id="23" name="ignoreNonOverlap" pos="0" />
+    </add>
+    <add id="333" objectId="24" parentObjId="23" parentObjType="function" what="parameter">
+      <parameter alias="" id="24" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Boolean" val="True" />
+    </add>
+    <add id="334" objectId="37" parentObjId="25" parentObjType="module" what="location">
+      <location id="37" x="-266.296966066" y="-187.888621357" />
+    </add>
+    <add id="335" objectId="26" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="26" name="CovariateCorrelationAndSelection" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="336" objectId="38" parentObjId="26" parentObjType="module" what="location">
+      <location id="38" x="-13.8788810699" y="-645.3624266" />
+    </add>
+    <add id="337" objectId="27" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="27" name="FieldData" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="338" objectId="24" parentObjId="27" parentObjType="module" what="function">
+      <function id="24" name="value" pos="0" />
+    </add>
+    <add id="339" objectId="25" parentObjId="24" parentObjType="function" what="parameter">
+      <parameter alias="" id="25" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="RMNP_Bromus.csv" />
+    </add>
+    <add id="340" objectId="39" parentObjId="27" parentObjType="module" what="location">
+      <location id="39" x="93.3909920434" y="70.9784473637" />
+    </add>
+    <add id="341" objectId="28" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="28" name="ModisPhenologyPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="342" objectId="25" parentObjId="28" parentObjType="module" what="function">
+      <function id="25" name="value" pos="0" />
+    </add>
+    <add id="343" objectId="26" parentObjId="25" parentObjType="function" what="parameter">
+      <parameter alias="" id="26" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:ModisPhenologyPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_amplitudes1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_seasonlengths1_Average.tif', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\NDVI_annualMeanValue_Average.tif', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="344" objectId="40" parentObjId="28" parentObjType="module" what="location">
+      <location id="40" x="-505.015763529" y="-36.6393069346" />
+    </add>
+    <add id="345" objectId="63" parentObjId="" parentObjType="" what="connection">
+      <connection id="63" />
+    </add>
+    <add id="346" objectId="126" parentObjId="63" parentObjType="connection" what="port">
+      <port id="126" moduleId="28" moduleName="ModisPhenologyPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+    <add id="347" objectId="127" parentObjId="63" parentObjType="connection" what="port">
+      <port id="127" moduleId="25" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+    <add id="348" objectId="29" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="29" name="MDSBuilder" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="349" objectId="41" parentObjId="29" parentObjType="module" what="location">
+      <location id="41" x="-179.883187167" y="-310.441458159" />
+    </add>
+    <add id="350" objectId="64" parentObjId="" parentObjType="" what="connection">
+      <connection id="64" />
+    </add>
+    <add id="351" objectId="128" parentObjId="64" parentObjType="connection" what="port">
+      <port id="128" moduleId="29" moduleName="MDSBuilder" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="352" objectId="129" parentObjId="64" parentObjType="connection" what="port">
+      <port id="129" moduleId="24" moduleName="ModelEvaluationSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="353" objectId="65" parentObjId="" parentObjType="" what="connection">
+      <connection id="65" />
+    </add>
+    <add id="354" objectId="130" parentObjId="65" parentObjType="connection" what="port">
+      <port id="130" moduleId="23" moduleName="FieldDataAggregateAndWeight" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="355" objectId="131" parentObjId="65" parentObjType="connection" what="port">
+      <port id="131" moduleId="29" moduleName="MDSBuilder" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="356" objectId="66" parentObjId="" parentObjType="" what="connection">
+      <connection id="66" />
+    </add>
+    <add id="357" objectId="132" parentObjId="66" parentObjType="connection" what="port">
+      <port id="132" moduleId="25" moduleName="PARC" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="source" />
+    </add>
+    <add id="358" objectId="133" parentObjId="66" parentObjType="connection" what="port">
+      <port id="133" moduleId="29" moduleName="MDSBuilder" name="RastersWithPARCInfoCSV" signature="(gov.usgs.sahm:RastersWithPARCInfoCSV:Other)" type="destination" />
+    </add>
+    <add id="359" objectId="30" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="30" name="ModelSelectionSplit" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="360" objectId="42" parentObjId="30" parentObjType="module" what="location">
+      <location id="42" x="-63.3889372739" y="-523.043464213" />
+    </add>
+    <add id="361" objectId="67" parentObjId="" parentObjType="" what="connection">
+      <connection id="67" />
+    </add>
+    <add id="362" objectId="134" parentObjId="67" parentObjType="connection" what="port">
+      <port id="134" moduleId="30" moduleName="ModelSelectionSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="363" objectId="135" parentObjId="67" parentObjType="connection" what="port">
+      <port id="135" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="364" objectId="68" parentObjId="" parentObjType="" what="connection">
+      <connection id="68" />
+    </add>
+    <add id="365" objectId="136" parentObjId="68" parentObjType="connection" what="port">
+      <port id="136" moduleId="24" moduleName="ModelEvaluationSplit" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="366" objectId="137" parentObjId="68" parentObjType="connection" what="port">
+      <port id="137" moduleId="30" moduleName="ModelSelectionSplit" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+    <add id="367" objectId="31" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="31" name="FieldDataQuery" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="368" objectId="28" parentObjId="31" parentObjType="module" what="function">
+      <function id="28" name="Response_column" pos="2" />
+    </add>
+    <add id="369" objectId="29" parentObjId="28" parentObjType="function" what="parameter">
+      <parameter alias="" id="29" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="Presence" />
+    </add>
+    <add id="370" objectId="27" parentObjId="31" parentObjType="module" what="function">
+      <function id="27" name="y_column" pos="1" />
+    </add>
+    <add id="371" objectId="28" parentObjId="27" parentObjType="function" what="parameter">
+      <parameter alias="" id="28" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="North" />
+    </add>
+    <add id="372" objectId="26" parentObjId="31" parentObjType="module" what="function">
+      <function id="26" name="x_column" pos="0" />
+    </add>
+    <add id="373" objectId="27" parentObjId="26" parentObjType="function" what="parameter">
+      <parameter alias="" id="27" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:String" val="West" />
+    </add>
+    <add id="374" objectId="43" parentObjId="31" parentObjType="module" what="location">
+      <location id="43" x="74.9470114784" y="-33.864668484" />
+    </add>
+    <add id="375" objectId="69" parentObjId="" parentObjType="" what="connection">
+      <connection id="69" />
+    </add>
+    <add id="376" objectId="138" parentObjId="69" parentObjType="connection" what="port">
+      <port id="138" moduleId="31" moduleName="FieldDataQuery" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="377" objectId="139" parentObjId="69" parentObjType="connection" what="port">
+      <port id="139" moduleId="23" moduleName="FieldDataAggregateAndWeight" name="fieldData" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="378" objectId="70" parentObjId="" parentObjType="" what="connection">
+      <connection id="70" />
+    </add>
+    <add id="379" objectId="140" parentObjId="70" parentObjType="connection" what="port">
+      <port id="140" moduleId="27" moduleName="FieldData" name="value" signature="(gov.usgs.sahm:FieldData:DataInput)" type="source" />
+    </add>
+    <add id="380" objectId="141" parentObjId="70" parentObjType="connection" what="port">
+      <port id="141" moduleId="31" moduleName="FieldDataQuery" name="fieldData_file" signature="(gov.usgs.sahm:FieldData:DataInput)" type="destination" />
+    </add>
+    <add id="381" objectId="32" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="32" name="PrismPredictors" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="382" objectId="29" parentObjId="32" parentObjType="module" what="function">
+      <function id="29" name="value" pos="0" />
+    </add>
+    <add id="383" objectId="30" parentObjId="29" parentObjType="function" what="parameter">
+      <parameter alias="" id="30" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:PrismPredictors:DataInput" val="[('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_18_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_06_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_05_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_03_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_17_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_07_1971_2000_800m.img', '0', 'bilinear', 'Mean'), ('..\\examples\\SAHM_example\\CovariateLayers\\PRISM_bio_15_1971_2000_800m.img', '0', 'bilinear', 'Mean')]" />
+    </add>
+    <add id="384" objectId="44" parentObjId="32" parentObjType="module" what="location">
+      <location id="44" x="-497.726639942" y="-125.931070871" />
+    </add>
+    <add id="385" objectId="71" parentObjId="" parentObjType="" what="connection">
+      <connection id="71" />
+    </add>
+    <add id="386" objectId="142" parentObjId="71" parentObjType="connection" what="port">
+      <port id="142" moduleId="32" moduleName="PrismPredictors" name="value" signature="(gov.usgs.sahm:PredictorList:Other)" type="source" />
+    </add>
+    <add id="387" objectId="143" parentObjId="71" parentObjType="connection" what="port">
+      <port id="143" moduleId="25" moduleName="PARC" name="PredictorList" signature="(gov.usgs.sahm:PredictorList:Other)" type="destination" />
+    </add>
+    <add id="388" objectId="33" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="33" name="TemplateLayer" namespace="DataInput" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="389" objectId="30" parentObjId="33" parentObjType="module" what="function">
+      <function id="30" name="value" pos="0" />
+    </add>
+    <add id="390" objectId="31" parentObjId="30" parentObjType="function" what="parameter">
+      <parameter alias="" id="31" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="romoveg800mr" />
+    </add>
+    <add id="391" objectId="45" parentObjId="33" parentObjType="module" what="location">
+      <location id="45" x="-231.370266445" y="60.5034604697" />
+    </add>
+    <add id="392" objectId="72" parentObjId="" parentObjType="" what="connection">
+      <connection id="72" />
+    </add>
+    <add id="393" objectId="144" parentObjId="72" parentObjType="connection" what="port">
+      <port id="144" moduleId="33" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+    <add id="394" objectId="145" parentObjId="72" parentObjType="connection" what="port">
+      <port id="145" moduleId="23" moduleName="FieldDataAggregateAndWeight" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+    <add id="395" objectId="73" parentObjId="" parentObjType="" what="connection">
+      <connection id="73" />
+    </add>
+    <add id="396" objectId="146" parentObjId="73" parentObjType="connection" what="port">
+      <port id="146" moduleId="33" moduleName="TemplateLayer" name="value" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="source" />
+    </add>
+    <add id="397" objectId="147" parentObjId="73" parentObjType="connection" what="port">
+      <port id="147" moduleId="25" moduleName="PARC" name="templateLayer" signature="(gov.usgs.sahm:TemplateLayer:DataInput)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:50:45" id="15" prevId="14" session="8" user="talbertc">
+    <annotation id="15" key="__description__" value="Paste" />
+    <add id="398" objectId="45" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="45" name="SAHMModelOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="399" objectId="57" parentObjId="45" parentObjType="module" what="location">
+      <location id="57" x="328.729452141" y="-920.80486714" />
+    </add>
+    <add id="400" objectId="46" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="46" name="SAHMSpatialOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="401" objectId="58" parentObjId="46" parentObjType="module" what="location">
+      <location id="58" x="348.648141061" y="-422.837644149" />
+    </add>
+    <add id="402" objectId="47" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="47" name="SAHMSpatialOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="403" objectId="59" parentObjId="47" parentObjType="module" what="location">
+      <location id="59" x="332.049233628" y="-562.268466587" />
+    </add>
+    <add id="404" objectId="48" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="48" name="SAHMSpatialOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="405" objectId="60" parentObjId="48" parentObjType="module" what="location">
+      <location id="60" x="335.369015114" y="-691.739944564" />
+    </add>
+    <add id="406" objectId="49" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="49" name="SAHMSpatialOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="407" objectId="61" parentObjId="49" parentObjType="module" what="location">
+      <location id="61" x="325.409670654" y="-851.089455921" />
+    </add>
+    <add id="408" objectId="50" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="50" name="BoostedRegressionTree" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="409" objectId="62" parentObjId="50" parentObjType="module" what="location">
+      <location id="62" x="-11.5481502363" y="-452.715677529" />
+    </add>
+    <add id="410" objectId="51" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="51" name="GLM" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="411" objectId="63" parentObjId="51" parentObjType="module" what="location">
+      <location id="63" x="-21.5074946963" y="-572.227811047" />
+    </add>
+    <add id="412" objectId="52" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="52" name="MARS" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="413" objectId="64" parentObjId="52" parentObjType="module" what="location">
+      <location id="64" x="-31.4668391563" y="-718.298196457" />
+    </add>
+    <add id="414" objectId="53" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="53" name="RandomForest" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="415" objectId="65" parentObjId="53" parentObjType="module" what="location">
+      <location id="65" x="-24.8272761823" y="-884.287270787" />
+    </add>
+    <add id="416" objectId="54" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="54" name="SAHMModelOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="417" objectId="66" parentObjId="54" parentObjType="module" what="location">
+      <location id="66" x="348.648141061" y="-485.913492395" />
+    </add>
+    <add id="418" objectId="55" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="55" name="SAHMModelOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="419" objectId="67" parentObjId="55" parentObjType="module" what="location">
+      <location id="67" x="335.369015114" y="-618.704751859" />
+    </add>
+    <add id="420" objectId="56" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="56" name="SAHMModelOutputViewerCell" namespace="Output" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="421" objectId="68" parentObjId="56" parentObjType="module" what="location">
+      <location id="68" x="335.369015114" y="-751.496011323" />
+    </add>
+    <add id="422" objectId="96" parentObjId="" parentObjType="" what="connection">
+      <connection id="96" />
+    </add>
+    <add id="423" objectId="193" parentObjId="96" parentObjType="connection" what="port">
+      <port id="193" moduleId="54" moduleName="SAHMModelOutputViewerCell" name="ModelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="424" objectId="192" parentObjId="96" parentObjType="connection" what="port">
+      <port id="192" moduleId="50" moduleName="BoostedRegressionTree" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="425" objectId="97" parentObjId="" parentObjType="" what="connection">
+      <connection id="97" />
+    </add>
+    <add id="426" objectId="195" parentObjId="97" parentObjType="connection" what="port">
+      <port id="195" moduleId="46" moduleName="SAHMSpatialOutputViewerCell" name="model_workspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="427" objectId="194" parentObjId="97" parentObjType="connection" what="port">
+      <port id="194" moduleId="50" moduleName="BoostedRegressionTree" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="428" objectId="98" parentObjId="" parentObjType="" what="connection">
+      <connection id="98" />
+    </add>
+    <add id="429" objectId="197" parentObjId="98" parentObjType="connection" what="port">
+      <port id="197" moduleId="55" moduleName="SAHMModelOutputViewerCell" name="ModelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="430" objectId="196" parentObjId="98" parentObjType="connection" what="port">
+      <port id="196" moduleId="51" moduleName="GLM" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="431" objectId="99" parentObjId="" parentObjType="" what="connection">
+      <connection id="99" />
+    </add>
+    <add id="432" objectId="199" parentObjId="99" parentObjType="connection" what="port">
+      <port id="199" moduleId="47" moduleName="SAHMSpatialOutputViewerCell" name="model_workspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="433" objectId="198" parentObjId="99" parentObjType="connection" what="port">
+      <port id="198" moduleId="51" moduleName="GLM" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="434" objectId="100" parentObjId="" parentObjType="" what="connection">
+      <connection id="100" />
+    </add>
+    <add id="435" objectId="201" parentObjId="100" parentObjType="connection" what="port">
+      <port id="201" moduleId="56" moduleName="SAHMModelOutputViewerCell" name="ModelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="436" objectId="200" parentObjId="100" parentObjType="connection" what="port">
+      <port id="200" moduleId="52" moduleName="MARS" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="437" objectId="101" parentObjId="" parentObjType="" what="connection">
+      <connection id="101" />
+    </add>
+    <add id="438" objectId="203" parentObjId="101" parentObjType="connection" what="port">
+      <port id="203" moduleId="48" moduleName="SAHMSpatialOutputViewerCell" name="model_workspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="439" objectId="202" parentObjId="101" parentObjType="connection" what="port">
+      <port id="202" moduleId="52" moduleName="MARS" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="440" objectId="102" parentObjId="" parentObjType="" what="connection">
+      <connection id="102" />
+    </add>
+    <add id="441" objectId="205" parentObjId="102" parentObjType="connection" what="port">
+      <port id="205" moduleId="45" moduleName="SAHMModelOutputViewerCell" name="ModelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="442" objectId="204" parentObjId="102" parentObjType="connection" what="port">
+      <port id="204" moduleId="53" moduleName="RandomForest" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="443" objectId="103" parentObjId="" parentObjType="" what="connection">
+      <connection id="103" />
+    </add>
+    <add id="444" objectId="207" parentObjId="103" parentObjType="connection" what="port">
+      <port id="207" moduleId="49" moduleName="SAHMSpatialOutputViewerCell" name="model_workspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="445" objectId="206" parentObjId="103" parentObjType="connection" what="port">
+      <port id="206" moduleId="53" moduleName="RandomForest" name="modelWorkspace" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:50:51" id="16" prevId="15" session="8" user="talbertc">
+    <change id="446" newObjId="69" oldObjId="57" parentObjId="45" parentObjType="module" what="location">
+      <location id="69" x="789.53181835" y="-1189.60624743" />
+    </change>
+    <change id="447" newObjId="70" oldObjId="58" parentObjId="46" parentObjType="module" what="location">
+      <location id="70" x="809.45050727" y="-691.639024438" />
+    </change>
+    <change id="448" newObjId="71" oldObjId="59" parentObjId="47" parentObjType="module" what="location">
+      <location id="71" x="792.851599837" y="-831.069846876" />
+    </change>
+    <change id="449" newObjId="72" oldObjId="60" parentObjId="48" parentObjType="module" what="location">
+      <location id="72" x="796.171381323" y="-960.541324853" />
+    </change>
+    <change id="450" newObjId="73" oldObjId="61" parentObjId="49" parentObjType="module" what="location">
+      <location id="73" x="786.212036863" y="-1119.89083621" />
+    </change>
+    <change id="451" newObjId="74" oldObjId="62" parentObjId="50" parentObjType="module" what="location">
+      <location id="74" x="449.254215973" y="-721.517057818" />
+    </change>
+    <change id="452" newObjId="75" oldObjId="63" parentObjId="51" parentObjType="module" what="location">
+      <location id="75" x="439.294871513" y="-841.029191336" />
+    </change>
+    <change id="453" newObjId="76" oldObjId="64" parentObjId="52" parentObjType="module" what="location">
+      <location id="76" x="429.335527053" y="-987.099576746" />
+    </change>
+    <change id="454" newObjId="77" oldObjId="65" parentObjId="53" parentObjType="module" what="location">
+      <location id="77" x="435.975090027" y="-1153.08865108" />
+    </change>
+    <change id="455" newObjId="78" oldObjId="66" parentObjId="54" parentObjType="module" what="location">
+      <location id="78" x="809.45050727" y="-754.714872684" />
+    </change>
+    <change id="456" newObjId="79" oldObjId="67" parentObjId="55" parentObjType="module" what="location">
+      <location id="79" x="796.171381323" y="-887.506132148" />
+    </change>
+    <change id="457" newObjId="80" oldObjId="68" parentObjId="56" parentObjType="module" what="location">
+      <location id="80" x="796.171381323" y="-1020.29739161" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:50:51" id="17" prevId="16" session="8" user="talbertc">
+    <add id="458" objectId="104" parentObjId="" parentObjType="" what="connection">
+      <connection id="104" />
+    </add>
+    <add id="459" objectId="208" parentObjId="104" parentObjType="connection" what="port">
+      <port id="208" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="460" objectId="209" parentObjId="104" parentObjType="connection" what="port">
+      <port id="209" moduleId="50" moduleName="BoostedRegressionTree" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:50:52" id="18" prevId="17" session="8" user="talbertc">
+    <add id="461" objectId="105" parentObjId="" parentObjType="" what="connection">
+      <connection id="105" />
+    </add>
+    <add id="462" objectId="210" parentObjId="105" parentObjType="connection" what="port">
+      <port id="210" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="463" objectId="211" parentObjId="105" parentObjType="connection" what="port">
+      <port id="211" moduleId="51" moduleName="GLM" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:50:59" id="19" prevId="18" session="8" user="talbertc">
+    <change id="464" newObjId="81" oldObjId="38" parentObjId="26" parentObjType="module" what="location">
+      <location id="81" x="30.0070585691" y="-645.3624266" />
+    </change>
+  </action>
+  <action date="2013-01-30 10:50:59" id="20" prevId="19" session="8" user="talbertc">
+    <add id="465" objectId="106" parentObjId="" parentObjType="" what="connection">
+      <connection id="106" />
+    </add>
+    <add id="466" objectId="212" parentObjId="106" parentObjType="connection" what="port">
+      <port id="212" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="467" objectId="213" parentObjId="106" parentObjType="connection" what="port">
+      <port id="213" moduleId="52" moduleName="MARS" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 10:51:02" id="21" prevId="20" session="8" user="talbertc">
+    <add id="468" objectId="107" parentObjId="" parentObjType="" what="connection">
+      <connection id="107" />
+    </add>
+    <add id="469" objectId="214" parentObjId="107" parentObjType="connection" what="port">
+      <port id="214" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="470" objectId="215" parentObjId="107" parentObjType="connection" what="port">
+      <port id="215" moduleId="53" moduleName="RandomForest" name="mdsFile" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:14:54" id="22" prevId="21" session="8" user="talbertc">
+    <add id="471" objectId="40" parentObjId="46" parentObjType="module" what="function">
+      <function id="40" name="row" pos="0" />
+    </add>
+    <add id="472" objectId="41" parentObjId="40" parentObjType="function" what="parameter">
+      <parameter alias="" id="41" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:14:58" id="23" prevId="22" session="8" user="talbertc">
+    <add id="473" objectId="41" parentObjId="47" parentObjType="module" what="function">
+      <function id="41" name="row" pos="0" />
+    </add>
+    <add id="474" objectId="42" parentObjId="41" parentObjType="function" what="parameter">
+      <parameter alias="" id="42" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:01" id="24" prevId="23" session="8" user="talbertc">
+    <add id="475" objectId="42" parentObjId="48" parentObjType="module" what="function">
+      <function id="42" name="row" pos="0" />
+    </add>
+    <add id="476" objectId="43" parentObjId="42" parentObjType="function" what="parameter">
+      <parameter alias="" id="43" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:04" id="25" prevId="24" session="8" user="talbertc">
+    <add id="477" objectId="43" parentObjId="49" parentObjType="module" what="function">
+      <function id="43" name="row" pos="0" />
+    </add>
+    <add id="478" objectId="44" parentObjId="43" parentObjType="function" what="parameter">
+      <parameter alias="" id="44" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:07" id="26" prevId="25" session="8" user="talbertc">
+    <add id="479" objectId="44" parentObjId="54" parentObjType="module" what="function">
+      <function id="44" name="row" pos="0" />
+    </add>
+    <add id="480" objectId="45" parentObjId="44" parentObjType="function" what="parameter">
+      <parameter alias="" id="45" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:09" id="27" prevId="26" session="8" user="talbertc">
+    <add id="481" objectId="45" parentObjId="55" parentObjType="module" what="function">
+      <function id="45" name="row" pos="0" />
+    </add>
+    <add id="482" objectId="46" parentObjId="45" parentObjType="function" what="parameter">
+      <parameter alias="" id="46" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:13" id="28" prevId="27" session="8" user="talbertc">
+    <add id="483" objectId="46" parentObjId="56" parentObjType="module" what="function">
+      <function id="46" name="row" pos="0" />
+    </add>
+    <add id="484" objectId="47" parentObjId="46" parentObjType="function" what="parameter">
+      <parameter alias="" id="47" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:15" id="29" prevId="28" session="8" user="talbertc">
+    <add id="485" objectId="47" parentObjId="45" parentObjType="module" what="function">
+      <function id="47" name="row" pos="0" />
+    </add>
+    <add id="486" objectId="48" parentObjId="47" parentObjType="function" what="parameter">
+      <parameter alias="" id="48" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:33" id="30" prevId="29" session="8" user="talbertc">
+    <add id="487" objectId="48" parentObjId="46" parentObjType="module" what="function">
+      <function id="48" name="column" pos="1" />
+    </add>
+    <add id="488" objectId="49" parentObjId="48" parentObjType="function" what="parameter">
+      <parameter alias="" id="49" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:37" id="31" prevId="30" session="8" user="talbertc">
+    <add id="489" objectId="49" parentObjId="54" parentObjType="module" what="function">
+      <function id="49" name="column" pos="1" />
+    </add>
+    <add id="490" objectId="50" parentObjId="49" parentObjType="function" what="parameter">
+      <parameter alias="" id="50" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:40" id="32" prevId="31" session="8" user="talbertc">
+    <add id="491" objectId="50" parentObjId="47" parentObjType="module" what="function">
+      <function id="50" name="column" pos="1" />
+    </add>
+    <add id="492" objectId="51" parentObjId="50" parentObjType="function" what="parameter">
+      <parameter alias="" id="51" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:43" id="33" prevId="32" session="8" user="talbertc">
+    <add id="493" objectId="51" parentObjId="55" parentObjType="module" what="function">
+      <function id="51" name="column" pos="1" />
+    </add>
+    <add id="494" objectId="52" parentObjId="51" parentObjType="function" what="parameter">
+      <parameter alias="" id="52" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:46" id="34" prevId="33" session="8" user="talbertc">
+    <add id="495" objectId="52" parentObjId="48" parentObjType="module" what="function">
+      <function id="52" name="column" pos="1" />
+    </add>
+    <add id="496" objectId="53" parentObjId="52" parentObjType="function" what="parameter">
+      <parameter alias="" id="53" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="3" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:50" id="35" prevId="34" session="8" user="talbertc">
+    <add id="497" objectId="53" parentObjId="56" parentObjType="module" what="function">
+      <function id="53" name="column" pos="1" />
+    </add>
+    <add id="498" objectId="54" parentObjId="53" parentObjType="function" what="parameter">
+      <parameter alias="" id="54" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="3" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:53" id="36" prevId="35" session="8" user="talbertc">
+    <add id="499" objectId="54" parentObjId="49" parentObjType="module" what="function">
+      <function id="54" name="column" pos="1" />
+    </add>
+    <add id="500" objectId="55" parentObjId="54" parentObjType="function" what="parameter">
+      <parameter alias="" id="55" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:15:56" id="37" prevId="36" session="8" user="talbertc">
+    <add id="501" objectId="55" parentObjId="45" parentObjType="module" what="function">
+      <function id="55" name="column" pos="1" />
+    </add>
+    <add id="502" objectId="56" parentObjId="55" parentObjType="function" what="parameter">
+      <parameter alias="" id="56" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:45:40" id="38" prevId="37" session="8" user="talbertc">
+    <delete id="503" objectId="193" parentObjId="96" parentObjType="connection" what="port" />
+    <delete id="504" objectId="192" parentObjId="96" parentObjType="connection" what="port" />
+    <delete id="505" objectId="96" parentObjId="" parentObjType="" what="connection" />
+    <delete id="506" objectId="195" parentObjId="97" parentObjType="connection" what="port" />
+    <delete id="507" objectId="194" parentObjId="97" parentObjType="connection" what="port" />
+    <delete id="508" objectId="97" parentObjId="" parentObjType="" what="connection" />
+    <delete id="509" objectId="197" parentObjId="98" parentObjType="connection" what="port" />
+    <delete id="510" objectId="196" parentObjId="98" parentObjType="connection" what="port" />
+    <delete id="511" objectId="98" parentObjId="" parentObjType="" what="connection" />
+    <delete id="512" objectId="199" parentObjId="99" parentObjType="connection" what="port" />
+    <delete id="513" objectId="198" parentObjId="99" parentObjType="connection" what="port" />
+    <delete id="514" objectId="99" parentObjId="" parentObjType="" what="connection" />
+    <delete id="515" objectId="201" parentObjId="100" parentObjType="connection" what="port" />
+    <delete id="516" objectId="200" parentObjId="100" parentObjType="connection" what="port" />
+    <delete id="517" objectId="100" parentObjId="" parentObjType="" what="connection" />
+    <delete id="518" objectId="203" parentObjId="101" parentObjType="connection" what="port" />
+    <delete id="519" objectId="202" parentObjId="101" parentObjType="connection" what="port" />
+    <delete id="520" objectId="101" parentObjId="" parentObjType="" what="connection" />
+    <delete id="521" objectId="205" parentObjId="102" parentObjType="connection" what="port" />
+    <delete id="522" objectId="204" parentObjId="102" parentObjType="connection" what="port" />
+    <delete id="523" objectId="102" parentObjId="" parentObjType="" what="connection" />
+    <delete id="524" objectId="207" parentObjId="103" parentObjType="connection" what="port" />
+    <delete id="525" objectId="206" parentObjId="103" parentObjType="connection" what="port" />
+    <delete id="526" objectId="103" parentObjId="" parentObjType="" what="connection" />
+    <delete id="527" objectId="208" parentObjId="104" parentObjType="connection" what="port" />
+    <delete id="528" objectId="209" parentObjId="104" parentObjType="connection" what="port" />
+    <delete id="529" objectId="104" parentObjId="" parentObjType="" what="connection" />
+    <delete id="530" objectId="210" parentObjId="105" parentObjType="connection" what="port" />
+    <delete id="531" objectId="211" parentObjId="105" parentObjType="connection" what="port" />
+    <delete id="532" objectId="105" parentObjId="" parentObjType="" what="connection" />
+    <delete id="533" objectId="212" parentObjId="106" parentObjType="connection" what="port" />
+    <delete id="534" objectId="213" parentObjId="106" parentObjType="connection" what="port" />
+    <delete id="535" objectId="106" parentObjId="" parentObjType="" what="connection" />
+    <delete id="536" objectId="214" parentObjId="107" parentObjType="connection" what="port" />
+    <delete id="537" objectId="215" parentObjId="107" parentObjType="connection" what="port" />
+    <delete id="538" objectId="107" parentObjId="" parentObjType="" what="connection" />
+    <delete id="539" objectId="80" parentObjId="56" parentObjType="module" what="location" />
+    <delete id="540" objectId="47" parentObjId="46" parentObjType="function" what="parameter" />
+    <delete id="541" objectId="46" parentObjId="56" parentObjType="module" what="function" />
+    <delete id="542" objectId="54" parentObjId="53" parentObjType="function" what="parameter" />
+    <delete id="543" objectId="53" parentObjId="56" parentObjType="module" what="function" />
+    <delete id="544" objectId="56" parentObjId="" parentObjType="" what="module" />
+    <delete id="545" objectId="72" parentObjId="48" parentObjType="module" what="location" />
+    <delete id="546" objectId="43" parentObjId="42" parentObjType="function" what="parameter" />
+    <delete id="547" objectId="42" parentObjId="48" parentObjType="module" what="function" />
+    <delete id="548" objectId="53" parentObjId="52" parentObjType="function" what="parameter" />
+    <delete id="549" objectId="52" parentObjId="48" parentObjType="module" what="function" />
+    <delete id="550" objectId="48" parentObjId="" parentObjType="" what="module" />
+    <delete id="551" objectId="75" parentObjId="51" parentObjType="module" what="location" />
+    <delete id="552" objectId="51" parentObjId="" parentObjType="" what="module" />
+    <delete id="553" objectId="70" parentObjId="46" parentObjType="module" what="location" />
+    <delete id="554" objectId="41" parentObjId="40" parentObjType="function" what="parameter" />
+    <delete id="555" objectId="40" parentObjId="46" parentObjType="module" what="function" />
+    <delete id="556" objectId="49" parentObjId="48" parentObjType="function" what="parameter" />
+    <delete id="557" objectId="48" parentObjId="46" parentObjType="module" what="function" />
+    <delete id="558" objectId="46" parentObjId="" parentObjType="" what="module" />
+    <delete id="559" objectId="74" parentObjId="50" parentObjType="module" what="location" />
+    <delete id="560" objectId="50" parentObjId="" parentObjType="" what="module" />
+    <delete id="561" objectId="77" parentObjId="53" parentObjType="module" what="location" />
+    <delete id="562" objectId="53" parentObjId="" parentObjType="" what="module" />
+    <delete id="563" objectId="76" parentObjId="52" parentObjType="module" what="location" />
+    <delete id="564" objectId="52" parentObjId="" parentObjType="" what="module" />
+    <delete id="565" objectId="71" parentObjId="47" parentObjType="module" what="location" />
+    <delete id="566" objectId="42" parentObjId="41" parentObjType="function" what="parameter" />
+    <delete id="567" objectId="41" parentObjId="47" parentObjType="module" what="function" />
+    <delete id="568" objectId="51" parentObjId="50" parentObjType="function" what="parameter" />
+    <delete id="569" objectId="50" parentObjId="47" parentObjType="module" what="function" />
+    <delete id="570" objectId="47" parentObjId="" parentObjType="" what="module" />
+    <delete id="571" objectId="78" parentObjId="54" parentObjType="module" what="location" />
+    <delete id="572" objectId="45" parentObjId="44" parentObjType="function" what="parameter" />
+    <delete id="573" objectId="44" parentObjId="54" parentObjType="module" what="function" />
+    <delete id="574" objectId="50" parentObjId="49" parentObjType="function" what="parameter" />
+    <delete id="575" objectId="49" parentObjId="54" parentObjType="module" what="function" />
+    <delete id="576" objectId="54" parentObjId="" parentObjType="" what="module" />
+    <delete id="577" objectId="73" parentObjId="49" parentObjType="module" what="location" />
+    <delete id="578" objectId="44" parentObjId="43" parentObjType="function" what="parameter" />
+    <delete id="579" objectId="43" parentObjId="49" parentObjType="module" what="function" />
+    <delete id="580" objectId="55" parentObjId="54" parentObjType="function" what="parameter" />
+    <delete id="581" objectId="54" parentObjId="49" parentObjType="module" what="function" />
+    <delete id="582" objectId="49" parentObjId="" parentObjType="" what="module" />
+    <delete id="583" objectId="79" parentObjId="55" parentObjType="module" what="location" />
+    <delete id="584" objectId="46" parentObjId="45" parentObjType="function" what="parameter" />
+    <delete id="585" objectId="45" parentObjId="55" parentObjType="module" what="function" />
+    <delete id="586" objectId="52" parentObjId="51" parentObjType="function" what="parameter" />
+    <delete id="587" objectId="51" parentObjId="55" parentObjType="module" what="function" />
+    <delete id="588" objectId="55" parentObjId="" parentObjType="" what="module" />
+    <delete id="589" objectId="69" parentObjId="45" parentObjType="module" what="location" />
+    <delete id="590" objectId="48" parentObjId="47" parentObjType="function" what="parameter" />
+    <delete id="591" objectId="47" parentObjId="45" parentObjType="module" what="function" />
+    <delete id="592" objectId="56" parentObjId="55" parentObjType="function" what="parameter" />
+    <delete id="593" objectId="55" parentObjId="45" parentObjType="module" what="function" />
+    <delete id="594" objectId="45" parentObjId="" parentObjType="" what="module" />
+  </action>
+  <action date="2013-01-30 11:45:45" id="39" prevId="38" session="8" user="talbertc">
+    <add id="595" objectId="57" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="57" name="MAXENT" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="596" objectId="82" parentObjId="57" parentObjType="module" what="location">
+      <location id="82" x="299.156472323" y="-968.455698536" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:45:50" id="40" prevId="39" session="8" user="talbertc">
+    <change id="597" newObjId="83" oldObjId="82" parentObjId="57" parentObjType="module" what="location">
+      <location id="83" x="349.860959157" y="-796.060443299" />
+    </change>
+  </action>
+  <action date="2013-01-30 11:45:50" id="41" prevId="40" session="8" user="talbertc">
+    <add id="598" objectId="108" parentObjId="" parentObjType="" what="connection">
+      <connection id="108" />
+    </add>
+    <add id="599" objectId="216" parentObjId="108" parentObjType="connection" what="port">
+      <port id="216" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="600" objectId="217" parentObjId="108" parentObjType="connection" what="port">
+      <port id="217" moduleId="57" moduleName="MAXENT" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:06" id="42" prevId="41" session="8" user="talbertc">
+    <add id="601" objectId="56" parentObjId="29" parentObjType="module" what="function">
+      <function id="56" name="backgroundPointCount" pos="0" />
+    </add>
+    <add id="602" objectId="57" parentObjId="56" parentObjType="function" what="parameter">
+      <parameter alias="" id="57" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="5000" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:06" id="43" prevId="42" session="8" user="talbertc">
+    <add id="603" objectId="57" parentObjId="29" parentObjType="module" what="function">
+      <function id="57" name="backgroundPointType" pos="1" />
+    </add>
+    <add id="604" objectId="58" parentObjId="57" parentObjType="function" what="parameter">
+      <parameter alias="" id="58" name="&lt;no description&gt;" pos="0" type="gov.usgs.sahm:RandomPointType:Other" val="Background" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:25" id="44" prevId="43" session="8" user="talbertc">
+    <add id="605" objectId="58" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="58" name="RasterFormatConverter" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="606" objectId="84" parentObjId="58" parentObjType="module" what="location">
+      <location id="84" x="461.410830192" y="-689.581020947" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:27" id="45" prevId="44" session="8" user="talbertc">
+    <add id="607" objectId="109" parentObjId="" parentObjType="" what="connection">
+      <connection id="109" />
+    </add>
+    <add id="608" objectId="218" parentObjId="109" parentObjType="connection" what="port">
+      <port id="218" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="609" objectId="219" parentObjId="109" parentObjType="connection" what="port">
+      <port id="219" moduleId="58" moduleName="RasterFormatConverter" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:31" id="46" prevId="45" session="8" user="talbertc">
+    <add id="610" objectId="110" parentObjId="" parentObjType="" what="connection">
+      <connection id="110" />
+    </add>
+    <add id="611" objectId="220" parentObjId="110" parentObjType="connection" what="port">
+      <port id="220" moduleId="58" moduleName="RasterFormatConverter" name="outputDir" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="612" objectId="221" parentObjId="110" parentObjType="connection" what="port">
+      <port id="221" moduleId="57" moduleName="MAXENT" name="environmentallayers" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:46:50" id="47" prevId="46" session="8" user="talbertc">
+    <add id="613" objectId="59" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="59" name="WebViewCell" namespace="" package="edu.utah.sci.vistrails.spreadsheet" version="0.9.1" />
+    </add>
+    <add id="614" objectId="85" parentObjId="59" parentObjType="module" what="location">
+      <location id="85" x="436.058586775" y="-1014.08973669" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:47:00" id="48" prevId="47" session="8" user="talbertc">
+    <add id="615" objectId="111" parentObjId="" parentObjType="" what="connection">
+      <connection id="111" />
+    </add>
+    <add id="616" objectId="222" parentObjId="111" parentObjType="connection" what="port">
+      <port id="222" moduleId="57" moduleName="MAXENT" name="report" signature="(edu.utah.sci.vistrails.basic:File)" type="source" />
+    </add>
+    <add id="617" objectId="223" parentObjId="111" parentObjType="connection" what="port">
+      <port id="223" moduleId="59" moduleName="WebViewCell" name="file" signature="(edu.utah.sci.vistrails.basic:File)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-01-30 11:47:08" id="49" prevId="48" session="8" user="talbertc">
+    <change id="618" newObjId="86" oldObjId="85" parentObjId="59" parentObjType="module" what="location">
+      <location id="86" x="501.97441966" y="-922.821660385" />
+    </change>
+  </action>
+  <action date="2013-01-30 11:52:42" id="50" prevId="37" session="8" user="talbertc">
+    <change id="619" newObjId="59" oldObjId="31" parentObjId="30" parentObjType="function" what="parameter">
+      <parameter alias="" id="59" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="100mTemplate.tif" />
+    </change>
+  </action>
+  <action date="2013-01-30 12:26:39" id="51" prevId="49" session="8" user="talbertc">
+    <change id="620" newObjId="60" oldObjId="31" parentObjId="30" parentObjType="function" what="parameter">
+      <parameter alias="" id="60" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="100mTemplate.tif" />
+    </change>
+  </action>
+  <action date="2013-02-01 14:44:36" id="52" prevId="37" session="11" user="talbertc">
+    <add id="621" objectId="58" parentObjId="29" parentObjType="module" what="function">
+      <function id="58" name="Seed" pos="0" />
+    </add>
+    <add id="622" objectId="61" parentObjId="58" parentObjType="function" what="parameter">
+      <parameter alias="" id="61" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-02-01 14:44:39" id="53" prevId="52" session="11" user="talbertc">
+    <add id="623" objectId="59" parentObjId="24" parentObjType="module" what="function">
+      <function id="59" name="Seed" pos="0" />
+    </add>
+    <add id="624" objectId="62" parentObjId="59" parentObjType="function" what="parameter">
+      <parameter alias="" id="62" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-02-01 14:44:43" id="54" prevId="53" session="11" user="talbertc">
+    <add id="625" objectId="60" parentObjId="30" parentObjType="module" what="function">
+      <function id="60" name="Seed" pos="0" />
+    </add>
+    <add id="626" objectId="63" parentObjId="60" parentObjType="function" what="parameter">
+      <parameter alias="" id="63" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </add>
+  </action>
+  <action date="2013-02-01 14:44:47" id="55" prevId="54" session="11" user="talbertc">
+    <add id="627" objectId="61" parentObjId="50" parentObjType="module" what="function">
+      <function id="61" name="Seed" pos="0" />
+    </add>
+    <add id="628" objectId="64" parentObjId="61" parentObjType="function" what="parameter">
+      <parameter alias="" id="64" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-02-01 14:44:50" id="56" prevId="55" session="11" user="talbertc">
+    <add id="629" objectId="62" parentObjId="53" parentObjType="module" what="function">
+      <function id="62" name="Seed" pos="0" />
+    </add>
+    <add id="630" objectId="65" parentObjId="62" parentObjType="function" what="parameter">
+      <parameter alias="" id="65" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="1" />
+    </add>
+  </action>
+  <action date="2013-02-04 15:26:06" id="57" prevId="56" session="14" user="talbertc">
+    <change id="631" newObjId="66" oldObjId="62" parentObjId="59" parentObjType="function" what="parameter">
+      <parameter alias="" id="66" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="2" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:26:09" id="58" prevId="57" session="14" user="talbertc">
+    <change id="632" newObjId="67" oldObjId="63" parentObjId="60" parentObjType="function" what="parameter">
+      <parameter alias="" id="67" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="3" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:26:15" id="59" prevId="58" session="14" user="talbertc">
+    <change id="633" newObjId="68" oldObjId="64" parentObjId="61" parentObjType="function" what="parameter">
+      <parameter alias="" id="68" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="4" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:26:20" id="60" prevId="59" session="14" user="talbertc">
+    <change id="634" newObjId="69" oldObjId="65" parentObjId="62" parentObjType="function" what="parameter">
+      <parameter alias="" id="69" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Integer" val="6" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:39:16" id="61" prevId="60" session="14" user="talbertc">
+    <change id="635" newObjId="70" oldObjId="31" parentObjId="30" parentObjType="function" what="parameter">
+      <parameter alias="" id="70" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="100mTemplate.tif" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:39:55" id="62" prevId="60" session="14" user="talbertc">
+    <delete id="636" objectId="193" parentObjId="96" parentObjType="connection" what="port" />
+    <delete id="637" objectId="192" parentObjId="96" parentObjType="connection" what="port" />
+    <delete id="638" objectId="96" parentObjId="" parentObjType="" what="connection" />
+    <delete id="639" objectId="195" parentObjId="97" parentObjType="connection" what="port" />
+    <delete id="640" objectId="194" parentObjId="97" parentObjType="connection" what="port" />
+    <delete id="641" objectId="97" parentObjId="" parentObjType="" what="connection" />
+    <delete id="642" objectId="197" parentObjId="98" parentObjType="connection" what="port" />
+    <delete id="643" objectId="196" parentObjId="98" parentObjType="connection" what="port" />
+    <delete id="644" objectId="98" parentObjId="" parentObjType="" what="connection" />
+    <delete id="645" objectId="199" parentObjId="99" parentObjType="connection" what="port" />
+    <delete id="646" objectId="198" parentObjId="99" parentObjType="connection" what="port" />
+    <delete id="647" objectId="99" parentObjId="" parentObjType="" what="connection" />
+    <delete id="648" objectId="201" parentObjId="100" parentObjType="connection" what="port" />
+    <delete id="649" objectId="200" parentObjId="100" parentObjType="connection" what="port" />
+    <delete id="650" objectId="100" parentObjId="" parentObjType="" what="connection" />
+    <delete id="651" objectId="203" parentObjId="101" parentObjType="connection" what="port" />
+    <delete id="652" objectId="202" parentObjId="101" parentObjType="connection" what="port" />
+    <delete id="653" objectId="101" parentObjId="" parentObjType="" what="connection" />
+    <delete id="654" objectId="205" parentObjId="102" parentObjType="connection" what="port" />
+    <delete id="655" objectId="204" parentObjId="102" parentObjType="connection" what="port" />
+    <delete id="656" objectId="102" parentObjId="" parentObjType="" what="connection" />
+    <delete id="657" objectId="207" parentObjId="103" parentObjType="connection" what="port" />
+    <delete id="658" objectId="206" parentObjId="103" parentObjType="connection" what="port" />
+    <delete id="659" objectId="103" parentObjId="" parentObjType="" what="connection" />
+    <delete id="660" objectId="208" parentObjId="104" parentObjType="connection" what="port" />
+    <delete id="661" objectId="209" parentObjId="104" parentObjType="connection" what="port" />
+    <delete id="662" objectId="104" parentObjId="" parentObjType="" what="connection" />
+    <delete id="663" objectId="210" parentObjId="105" parentObjType="connection" what="port" />
+    <delete id="664" objectId="211" parentObjId="105" parentObjType="connection" what="port" />
+    <delete id="665" objectId="105" parentObjId="" parentObjType="" what="connection" />
+    <delete id="666" objectId="212" parentObjId="106" parentObjType="connection" what="port" />
+    <delete id="667" objectId="213" parentObjId="106" parentObjType="connection" what="port" />
+    <delete id="668" objectId="106" parentObjId="" parentObjType="" what="connection" />
+    <delete id="669" objectId="214" parentObjId="107" parentObjType="connection" what="port" />
+    <delete id="670" objectId="215" parentObjId="107" parentObjType="connection" what="port" />
+    <delete id="671" objectId="107" parentObjId="" parentObjType="" what="connection" />
+    <delete id="672" objectId="73" parentObjId="49" parentObjType="module" what="location" />
+    <delete id="673" objectId="44" parentObjId="43" parentObjType="function" what="parameter" />
+    <delete id="674" objectId="43" parentObjId="49" parentObjType="module" what="function" />
+    <delete id="675" objectId="55" parentObjId="54" parentObjType="function" what="parameter" />
+    <delete id="676" objectId="54" parentObjId="49" parentObjType="module" what="function" />
+    <delete id="677" objectId="49" parentObjId="" parentObjType="" what="module" />
+    <delete id="678" objectId="76" parentObjId="52" parentObjType="module" what="location" />
+    <delete id="679" objectId="52" parentObjId="" parentObjType="" what="module" />
+    <delete id="680" objectId="69" parentObjId="45" parentObjType="module" what="location" />
+    <delete id="681" objectId="48" parentObjId="47" parentObjType="function" what="parameter" />
+    <delete id="682" objectId="47" parentObjId="45" parentObjType="module" what="function" />
+    <delete id="683" objectId="56" parentObjId="55" parentObjType="function" what="parameter" />
+    <delete id="684" objectId="55" parentObjId="45" parentObjType="module" what="function" />
+    <delete id="685" objectId="45" parentObjId="" parentObjType="" what="module" />
+    <delete id="686" objectId="75" parentObjId="51" parentObjType="module" what="location" />
+    <delete id="687" objectId="51" parentObjId="" parentObjType="" what="module" />
+    <delete id="688" objectId="80" parentObjId="56" parentObjType="module" what="location" />
+    <delete id="689" objectId="47" parentObjId="46" parentObjType="function" what="parameter" />
+    <delete id="690" objectId="46" parentObjId="56" parentObjType="module" what="function" />
+    <delete id="691" objectId="54" parentObjId="53" parentObjType="function" what="parameter" />
+    <delete id="692" objectId="53" parentObjId="56" parentObjType="module" what="function" />
+    <delete id="693" objectId="56" parentObjId="" parentObjType="" what="module" />
+    <delete id="694" objectId="72" parentObjId="48" parentObjType="module" what="location" />
+    <delete id="695" objectId="43" parentObjId="42" parentObjType="function" what="parameter" />
+    <delete id="696" objectId="42" parentObjId="48" parentObjType="module" what="function" />
+    <delete id="697" objectId="53" parentObjId="52" parentObjType="function" what="parameter" />
+    <delete id="698" objectId="52" parentObjId="48" parentObjType="module" what="function" />
+    <delete id="699" objectId="48" parentObjId="" parentObjType="" what="module" />
+    <delete id="700" objectId="79" parentObjId="55" parentObjType="module" what="location" />
+    <delete id="701" objectId="46" parentObjId="45" parentObjType="function" what="parameter" />
+    <delete id="702" objectId="45" parentObjId="55" parentObjType="module" what="function" />
+    <delete id="703" objectId="52" parentObjId="51" parentObjType="function" what="parameter" />
+    <delete id="704" objectId="51" parentObjId="55" parentObjType="module" what="function" />
+    <delete id="705" objectId="55" parentObjId="" parentObjType="" what="module" />
+    <delete id="706" objectId="77" parentObjId="53" parentObjType="module" what="location" />
+    <delete id="707" objectId="69" parentObjId="62" parentObjType="function" what="parameter" />
+    <delete id="708" objectId="62" parentObjId="53" parentObjType="module" what="function" />
+    <delete id="709" objectId="53" parentObjId="" parentObjType="" what="module" />
+    <delete id="710" objectId="74" parentObjId="50" parentObjType="module" what="location" />
+    <delete id="711" objectId="68" parentObjId="61" parentObjType="function" what="parameter" />
+    <delete id="712" objectId="61" parentObjId="50" parentObjType="module" what="function" />
+    <delete id="713" objectId="50" parentObjId="" parentObjType="" what="module" />
+    <delete id="714" objectId="70" parentObjId="46" parentObjType="module" what="location" />
+    <delete id="715" objectId="41" parentObjId="40" parentObjType="function" what="parameter" />
+    <delete id="716" objectId="40" parentObjId="46" parentObjType="module" what="function" />
+    <delete id="717" objectId="49" parentObjId="48" parentObjType="function" what="parameter" />
+    <delete id="718" objectId="48" parentObjId="46" parentObjType="module" what="function" />
+    <delete id="719" objectId="46" parentObjId="" parentObjType="" what="module" />
+    <delete id="720" objectId="78" parentObjId="54" parentObjType="module" what="location" />
+    <delete id="721" objectId="45" parentObjId="44" parentObjType="function" what="parameter" />
+    <delete id="722" objectId="44" parentObjId="54" parentObjType="module" what="function" />
+    <delete id="723" objectId="50" parentObjId="49" parentObjType="function" what="parameter" />
+    <delete id="724" objectId="49" parentObjId="54" parentObjType="module" what="function" />
+    <delete id="725" objectId="54" parentObjId="" parentObjType="" what="module" />
+    <delete id="726" objectId="71" parentObjId="47" parentObjType="module" what="location" />
+    <delete id="727" objectId="42" parentObjId="41" parentObjType="function" what="parameter" />
+    <delete id="728" objectId="41" parentObjId="47" parentObjType="module" what="function" />
+    <delete id="729" objectId="51" parentObjId="50" parentObjType="function" what="parameter" />
+    <delete id="730" objectId="50" parentObjId="47" parentObjType="module" what="function" />
+    <delete id="731" objectId="47" parentObjId="" parentObjType="" what="module" />
+  </action>
+  <action date="2013-02-04 15:39:56" id="63" prevId="62" session="14" user="talbertc">
+    <annotation id="33" key="__description__" value="Paste" />
+    <add id="732" objectId="60" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="60" name="MAXENT" namespace="Models" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="733" objectId="87" parentObjId="60" parentObjType="module" what="location">
+      <location id="87" x="97.183599766" y="-581.411449034" />
+    </add>
+    <add id="734" objectId="61" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="61" name="RasterFormatConverter" namespace="Tools" package="gov.usgs.sahm" version="1.0.1" />
+    </add>
+    <add id="735" objectId="88" parentObjId="61" parentObjType="module" what="location">
+      <location id="88" x="208.733470801" y="-474.932026681" />
+    </add>
+    <add id="736" objectId="62" parentObjId="" parentObjType="" what="module">
+      <module cache="1" id="62" name="WebViewCell" namespace="" package="edu.utah.sci.vistrails.spreadsheet" version="0.9.1" />
+    </add>
+    <add id="737" objectId="89" parentObjId="62" parentObjType="module" what="location">
+      <location id="89" x="249.297060269" y="-708.172666119" />
+    </add>
+    <add id="738" objectId="112" parentObjId="" parentObjType="" what="connection">
+      <connection id="112" />
+    </add>
+    <add id="739" objectId="225" parentObjId="112" parentObjType="connection" what="port">
+      <port id="225" moduleId="60" moduleName="MAXENT" name="environmentallayers" signature="(edu.utah.sci.vistrails.basic:Directory)" type="destination" />
+    </add>
+    <add id="740" objectId="224" parentObjId="112" parentObjType="connection" what="port">
+      <port id="224" moduleId="61" moduleName="RasterFormatConverter" name="outputDir" signature="(edu.utah.sci.vistrails.basic:Directory)" type="source" />
+    </add>
+    <add id="741" objectId="113" parentObjId="" parentObjType="" what="connection">
+      <connection id="113" />
+    </add>
+    <add id="742" objectId="227" parentObjId="113" parentObjType="connection" what="port">
+      <port id="227" moduleId="62" moduleName="WebViewCell" name="file" signature="(edu.utah.sci.vistrails.basic:File)" type="destination" />
+    </add>
+    <add id="743" objectId="226" parentObjId="113" parentObjType="connection" what="port">
+      <port id="226" moduleId="60" moduleName="MAXENT" name="report" signature="(edu.utah.sci.vistrails.basic:File)" type="source" />
+    </add>
+  </action>
+  <action date="2013-02-04 15:40:02" id="64" prevId="63" session="14" user="talbertc">
+    <change id="744" newObjId="90" oldObjId="87" parentObjId="60" parentObjType="module" what="location">
+      <location id="90" x="462.255904973" y="-916.06106214" />
+    </change>
+    <change id="745" newObjId="91" oldObjId="88" parentObjId="61" parentObjType="module" what="location">
+      <location id="91" x="573.805776008" y="-809.581639788" />
+    </change>
+    <change id="746" newObjId="92" oldObjId="89" parentObjId="62" parentObjType="module" what="location">
+      <location id="92" x="614.369365476" y="-1042.82227923" />
+    </change>
+  </action>
+  <action date="2013-02-04 15:40:02" id="65" prevId="64" session="14" user="talbertc">
+    <add id="747" objectId="114" parentObjId="" parentObjType="" what="connection">
+      <connection id="114" />
+    </add>
+    <add id="748" objectId="228" parentObjId="114" parentObjType="connection" what="port">
+      <port id="228" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="749" objectId="229" parentObjId="114" parentObjType="connection" what="port">
+      <port id="229" moduleId="60" moduleName="MAXENT" name="biasfile" signature="(edu.utah.sci.vistrails.basic:File)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-02-04 15:40:04" id="66" prevId="65" session="14" user="talbertc">
+    <delete id="750" objectId="228" parentObjId="114" parentObjType="connection" what="port" />
+    <delete id="751" objectId="229" parentObjId="114" parentObjType="connection" what="port" />
+    <delete id="752" objectId="114" parentObjId="" parentObjType="" what="connection" />
+  </action>
+  <action date="2013-02-04 15:40:13" id="67" prevId="66" session="14" user="talbertc">
+    <add id="753" objectId="115" parentObjId="" parentObjType="" what="connection">
+      <connection id="115" />
+    </add>
+    <add id="754" objectId="230" parentObjId="115" parentObjType="connection" what="port">
+      <port id="230" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="755" objectId="231" parentObjId="115" parentObjType="connection" what="port">
+      <port id="231" moduleId="60" moduleName="MAXENT" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-02-04 15:40:15" id="68" prevId="67" session="14" user="talbertc">
+    <add id="756" objectId="116" parentObjId="" parentObjType="" what="connection">
+      <connection id="116" />
+    </add>
+    <add id="757" objectId="232" parentObjId="116" parentObjType="connection" what="port">
+      <port id="232" moduleId="26" moduleName="CovariateCorrelationAndSelection" name="outputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="source" />
+    </add>
+    <add id="758" objectId="233" parentObjId="116" parentObjType="connection" what="port">
+      <port id="233" moduleId="61" moduleName="RasterFormatConverter" name="inputMDS" signature="(gov.usgs.sahm:MergedDataSet:Other)" type="destination" />
+    </add>
+  </action>
+  <action date="2013-02-04 15:41:22" id="69" prevId="68" session="14" user="talbertc">
+    <change id="759" newObjId="71" oldObjId="31" parentObjId="30" parentObjType="function" what="parameter">
+      <parameter alias="" id="71" name="&lt;no description&gt;" pos="0" type="edu.utah.sci.vistrails.basic:Path" val="100mTemplate.tif" />
+    </change>
+  </action>
+  <actionAnnotation actionId="1" date="2013-01-30 09:59:23" id="1" key="__tag__" user="talbertc" value="Prepping field data" />
+  <actionAnnotation actionId="1" date="2013-01-30 10:01:52" id="2" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The field data obtained from NIISS is not in the format required for supsequent processing.&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The field data query module is used to select the appropriate columns for x, y and response.&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The field data agregate and weight module is used to spatially aggregate the field data to match the resolution and extent of the template layer.&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="8" date="2013-01-30 10:05:51" id="5" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;In this node we process our spatial inputs.  This involves reprojecting and resampling them to match the provided template layer.&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Note the option to ignore non overlap was selected because of a slight mismatch in the extents.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="11" date="2013-01-30 10:22:15" id="9" key="__upgrade__" user="talbertc" value="12" />
+  <actionAnnotation actionId="13" date="2013-01-30 10:38:04" id="12" key="__upgrade__" user="talbertc" value="14" />
+  <actionAnnotation actionId="14" date="2013-01-30 10:46:49" id="14" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;The MDS builder extracts out the raster values at each of our field data points and stores this data in a single CSV for efficient use in subsequent processes.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;The two levels of test training data splitting are used to insure both rigourous model fitting and robust model selection.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;The CovariateCorrelationAndSelection Module gives users a chance to explore the data, identify strongly correlated covariates, and remove these from subsequent modeling.  It interupts the workflow to display an interactive GUI.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="8" date="2013-01-30 11:44:34" id="16" key="__tag__" user="talbertc" value="Prepping raster covariates 800m template" />
+  <actionAnnotation actionId="60" date="2013-02-04 15:38:42" id="26" key="__tag__" user="talbertc" value="Four R models 800m template" />
+  <actionAnnotation actionId="37" date="2013-02-04 15:38:48" id="27" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="60" date="2013-02-04 15:38:53" id="28" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;In this node all four models are run and the output is displayed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="61" date="2013-02-04 15:39:26" id="29" key="__tag__" user="talbertc" value="Four R models 100m template" />
+  <actionAnnotation actionId="50" date="2013-02-04 15:39:29" id="30" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="61" date="2013-02-04 15:39:32" id="31" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;By changing out the template file we can rerun the model at a different spatial resolution.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="50" date="2013-02-04 15:39:36" id="32" key="__prune__" user="talbertc" value="True" />
+  <actionAnnotation actionId="49" date="2013-02-04 15:40:35" id="34" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="68" date="2013-02-04 15:40:47" id="36" key="__tag__" user="talbertc" value="Maxent model 800m" />
+  <actionAnnotation actionId="69" date="2013-02-04 15:41:29" id="37" key="__tag__" user="talbertc" value="Maxent model 100m" />
+  <actionAnnotation actionId="38" date="2013-02-04 15:41:33" id="38" key="__prune__" user="talbertc" value="True" />
+  <actionAnnotation actionId="68" date="2013-02-04 15:41:52" id="39" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;One must generate background points for use within the Maxent application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="69" date="2013-02-04 15:42:04" id="40" key="__notes__" user="talbertc" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#xA;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;By changing out the template file we can rerun the model at a different spatial resolution.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" />
+  <actionAnnotation actionId="14" date="2013-02-04 15:42:23" id="41" key="__tag__" user="talbertc" value="Data processing examination and subsetting" />
+</vistrail>
