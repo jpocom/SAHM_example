@@ -1,0 +1,9 @@
+PARCOutputFile,Categorical,Resampling,Aggregation
+BrewersSparrowData\Predictors900m\abs_1km\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\asage_1km\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\cfrst_18km\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\mix_18km\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\ndvi_270\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\rddens_18km\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\rip_540m\hdr.adf,0,Bilinear,Mean
+BrewersSparrowData\Predictors900m\tri_18km\hdr.adf,0,Bilinear,Mean

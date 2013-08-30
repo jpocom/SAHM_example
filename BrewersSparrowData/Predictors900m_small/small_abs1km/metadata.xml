@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20130819</CreaDate><CreaTime>15011000</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\ExtractByMask" Date="20130819" Time="150110">ExtractByMask abs_1km Convex_Hull_BRSP_Basin_Occur_buff50km C:\data\USGS_VisTrails\BRSP_Tutorial\Predictors900m_small\small_abs1km</Process></lineage></DataProperties></Esri></metadata>
